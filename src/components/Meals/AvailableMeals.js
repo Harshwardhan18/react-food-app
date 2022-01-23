@@ -38,8 +38,8 @@ const AvailableMeals = () => {
 
   if (isLoading || error) {
     return (
-      <section className={classes.MealsLoading}>
-        <p>{error || 'Loading...'}</p>
+      <section className={error ? classes.MealsError : classes.MealsLoading}>
+        <p>{error ? error : 'Loading...'}</p>
       </section>
     );
   }
